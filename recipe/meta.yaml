@@ -1,4 +1,4 @@
-{% set version = "0.6.3.1.0" %}
+{% set version = "0.6.3.1.1" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,7 +10,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rvinecopulib_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rvinecopulib/rvinecopulib_{{ version }}.tar.gz
-  sha256: 7bc21c4352f8c2b52f0cf140b95fbf4c172129610254dd12cf6e96226523f00a
+  sha256: df95d007552e7fa30aefad90a86acf5e14f6fe1e363ed4c71a74d501a08cbf32
 
 build:
   merge_build_host: true  # [win]
