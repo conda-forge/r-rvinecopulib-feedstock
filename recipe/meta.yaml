@@ -1,6 +1,5 @@
 {% set version = "0.6.3.1.1" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-rvinecopulib
@@ -13,8 +12,7 @@ source:
   sha256: df95d007552e7fa30aefad90a86acf5e14f6fe1e363ed4c71a74d501a08cbf32
 
 build:
-  merge_build_host: true  # [win]
-  number: 1
+  number: 2
   rpaths:
     - lib/R/lib/
     - lib/
@@ -22,7 +20,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ compiler('cxx') }}            # [not win]
     - {{ compiler('m2w64_cxx') }}      # [win]
     - {{ posix }}filesystem        # [win]
@@ -43,7 +43,6 @@ requirements:
     - r-wdm
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
     #- r-bh
     - r-rcpp >=0.12.12
     - r-rcppeigen
