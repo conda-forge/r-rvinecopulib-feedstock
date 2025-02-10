@@ -1,4 +1,4 @@
-{% set version = "0.7.1.1.0" %}
+{% set version = "0.7.1.1.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rvinecopulib_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rvinecopulib/rvinecopulib_{{ version }}.tar.gz
-  sha256: 72b5ab4acccf55e88f59ecfff565448492e0ef9d66b2c699dbadda95ce42e25e
+  sha256: 173b4a860119060cba2393d8efdbb9ef17af5167aab32987802c357537969087
 
 build:
   number: 0
