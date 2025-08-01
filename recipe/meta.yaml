@@ -16,6 +16,10 @@ build:
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -38,9 +42,9 @@ requirements:
     - r-rcppeigen
     - r-rcppthread >=2.1.2
     - r-assertthat
-    - r-kde1d >=1.0.2
+    - r-kde1d >=1.1.0
     - r-lattice
-    - r-wdm
+    - r-wdm >=0.2.6
   run:
     - r-base
     #- r-bh
@@ -48,9 +52,9 @@ requirements:
     - r-rcppeigen
     - r-rcppthread >=2.1.2
     - r-assertthat
-    - r-kde1d >=1.0.2
+    - r-kde1d >=1.1.0
     - r-lattice
-    - r-wdm
+    - r-wdm >=0.2.6
 
 test:
   commands:
