@@ -1,4 +1,4 @@
-{% set version = "0.7.3.1.0" %}
+{% set version = "1.0.0.1.0" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rvinecopulib_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rvinecopulib/rvinecopulib_{{ version }}.tar.gz
-  sha256: ce0e2d34f49c0dca82f91eb5f31b5d62a818d7ac06708af34724ed66399317b8
+  sha256: 64d7b9ed32ea613992833f93c074f0ed3f2fc152136c4b3992e4f5024bd92fa2
 
 build:
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -64,9 +64,9 @@ test:
 about:
   home: https://CRAN.R-project.org/package=rvinecopulib
   license: GPL-3.0-only
-  summary: Provides an interface to 'vinecopulib', a C++ library for vine copula modeling. The 'rvinecopulib' package implements the core features of the popular 'VineCopula' package, in particular inference algorithms for both vine copula and bivariate copula models. Advantages over 'VineCopula' are a sleeker and more modern
-    API, improved performances, especially in high dimensions, nonparametric and multi-parameter families, and the ability to model discrete variables. The 'rvinecopulib' package includes 'vinecopulib' as header-only C++ library (currently version 0.6.1). Thus users do not need to install 'vinecopulib' itself in order to
-    use 'rvinecopulib'. Since their initial releases, 'vinecopulib' is licensed under the MIT License, and 'rvinecopulib' is licensed under the GNU GPL version 3.
+  summary: Provides an interface to 'vinecopulib', a C++ library for vine copula modeling. The 'rvinecopulib' package implements the core features of the popular 'VineCopula' package, in particular inference algorithms for both vine copula and bivariate copula models. Advantages over 'VineCopula' are a sleeker and more
+    modern API, improved performances, especially in high dimensions, nonparametric and multi-parameter families, and the ability to model discrete variables. The 'rvinecopulib' package includes 'vinecopulib' as header-only C++ library (currently version 0.6.1). Thus users do not need to install 'vinecopulib' itself in
+    order to use 'rvinecopulib'. Since their initial releases, 'vinecopulib' is licensed under the MIT License, and 'rvinecopulib' is licensed under the GNU GPL version 3.
   license_family: GPL3
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/GPL-3
